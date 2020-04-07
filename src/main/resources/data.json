@@ -1,5 +1,4 @@
 {
-  "basicTest" :{
     "exemple": {
       "variable1": 32,
       "variable2": "bonjour",
@@ -8,17 +7,19 @@
     "compareNumber" : [
       57,63,48
     ],
-    "users": {
-      "thomas": {
+    "users":[
+      {
+        "name": "thomas",
         "role": "admin",
         "vue": 451,
         "youtube": "thomasYt"
       },
-      "martin": {
-        "role": "user",
+      {
+      "name": "martin",
+
+      "role": "user",
         "vue": 2,
         "youtube": "martinMatinYt"
       }
-    }
-  }
+    ]
 }
