@@ -18,7 +18,7 @@ public class BrowserTest {
     @BeforeEach
     public void setup(){
         ClassLoader classLoader = new BrowserTest().getClass().getClassLoader();
-        String os = System.getProperty("os.name");
+        String os = System.getProperty("os.name").toLowerCase();
         if((os.indexOf("win") >= 0)){
             System.setProperty("webdriver.chrome.driver", classLoader.getResource("drivers/windows/chromedriver.exe").getPath());
         }else if(os.indexOf("mac") >= 0){
