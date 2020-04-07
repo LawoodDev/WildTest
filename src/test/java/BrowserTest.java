@@ -11,13 +11,13 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElemen
 
 import java.time.Duration;
 
-public class Test1 {
+public class BrowserTest {
     WebDriver chrome;
     WebDriverWait wait;
 
     @BeforeEach
     public void setup(){
-        ClassLoader classLoader = new Test1().getClass().getClassLoader();
+        ClassLoader classLoader = new BrowserTest().getClass().getClassLoader();
         String os = System.getProperty("os.name");
         if((os.indexOf("win") >= 0)){
             System.setProperty("webdriver.chrome.driver", classLoader.getResource("drivers/windows/chromedriver.exe").getPath());

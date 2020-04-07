@@ -18,7 +18,7 @@ public class StartTest {
     }
     @Test
     public void exampleVariable1(){
-        assertEquals((long) 32, basicTest.getExemple().getVariable1());
+        assertEquals( 32L, basicTest.getExemple().getVariable1());
     }
     @Test
     public void exampleVariable2(){
