@@ -14,7 +14,7 @@ import java.time.Duration;
 public class BrowserTest {
     WebDriver chrome;
     WebDriverWait wait;
-
+    //beforeeach va s'executer avant chaqu'un des test
     @BeforeEach
     public void setup(){
         ClassLoader classLoader = new BrowserTest().getClass().getClassLoader();
@@ -31,15 +31,17 @@ public class BrowserTest {
     }
 
     @Test
-    public void searchCheese(){
+    public void searchCheeseAndGoToWikipedia(){
         try {
             chrome.get("https://google.com");
             chrome.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER);
             WebElement firstResult = wait.until(presenceOfElementLocated(By.cssSelector("h3")));
             assertEquals("Cheese — Wikipédia",firstResult.getAttribute("textContent"));
+            firstResult.click();
         } finally {
             chrome.quit();
         }
     }
+
 
 }
